@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Website Bart Allen</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="js/functionality.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/Technology.jpg" type="image/x-icon">
+    <!-- Version 2.0 of the website -->
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/fade-effect.js"></script> -->
+</head>
+
+<body onload="document.getElementById('UPS').click();">
+
+    <div class="hero">
+        <h1 class="scroll-fade" id="intro-p1">Hey there <br> <span id="bart_allen" class="scroll-fade">I am Bartholomew Allen <br><span id="expertise" class="scroll-fade">
+                    Software Engineer & Self taught Web Developer</span></span></h1>
+        <div class="overlay"></div>
+        <!-- <h1 id="bart_allen">I am Bartholomew Allen</h1> -->
+        <!-- <h3 id="expertise">Software Engineer & Self taught Web Developer</h3> -->
+    </div>
+
+    <section class="aboutMe">
+        <div class="aboutMe-container">
+             <img src="images/Bartholomew-Allen.jpg" alt="Bartholomew Allen linkedIn photo" class="gradImage2">
+            <div class="gradImage"></div>
+           
+            <div id="aboutMe-blurb">
+                <h2>About Me</h2>
+                <p id="about_me_text">
+                    I am a Towson University Alumni, graduated in December of 2019 with my Bachelor of Science in
+                    Computer Science. I have two years of Software Development experience with various technologies and
+                    projects. My first experience comes from Web Development, a skill I taught myself during the off
+                    semesters of college because I loved how fast I was able to create something using only HTML & CSS.
+                    From their I expanded and started to pick up JavaScript with a little jQuery on the side. This was
+                    the start of this project back in 2017 (3 years in the making). JavaScript gave me the power to
+                    start using frameworks that I learned in my first Software Developer role. My second experience
+                    entitles a cascade of learning new technologies in various forms. At my first internship with UPS, I
+                    was exposed to Machine Learning and SQL for the very first time. <br><br>
+                    Through that internship I was able to learn SQL up to an intermediate level creating semi-complex
+                    queries for reports and storing data for the Machine Learning Algorithm. Secondly, I fell in love
+                    with Data Science, from utilizing statistics knowledge to coding an algorithm which consumes massive
+                    amounts of data for predictions and accuracy calculations. Outside of the programming I love to run,
+                    I have been running since my freshmen year of high school (when I used to run competitively over 11
+                    years). Although I can’t run as fast as I used to I still find time to run at least a few times a
+                    week and even start to run in local 5k’s to work towards beating my high school PR (17 mins 55
+                    secs).
+
+                </p>
+            </div>
+        </div>
+  
+    </section>
+
+
+    <div class="img-section1"></div>
+    <!-- Skills section which consists of programming languages that I work with and skills that I possess -->
+    <section class="skillSet">
+        <div class="skillSet-container">
+            <h1 id="skills">Skill Set</h1>
+            <div class="skillSet-section">
+                <div class="programming-languages">
+                    <h3 class="skillSet-header">Experienced Technologies</h3>
+                    <li>
+                        <h4>Java/C#</h4><span class="bar"><span class="Java_CS"></span></span>
+                    </li>
+                    <li>
+                        <h4>SQL</h4><span class="bar"><span class="SQL"></span></span>
+                    </li>
+                    <li>
+                        <h4>HTML/CSS</h4><span class="bar"><span class="html_css"></span></span>
+                    </li>
+                    <li>
+                        <h4>C++</h4><span class="bar"><span class="cpp"></span></span>
+                    </li>
+                    <li>
+                        <h4>Node.js</h4><span class="bar"><span class="nodejs"></span></span>
+                    </li>
+                </div>
+
+                <div id="other_skills_section">
+                    <h3 class="skillSet-header">Other</h3>
+                    <br><br>
+                    <div class="other_skills">
+                        <div class="card" id="ml">Machine Learning</div>
+                        <div class="card" id="py">Python</div>
+                        <div class="card" id="mdb">MongoDB</div>
+                        <div class="card" id="nn">Neural Networks</div>
+                        <div class="card" id="DS">Data Science</div>
+                        <div class="card" id="jn">Jupyter Notebooks</div>
+                        <div class="card" id="react">React</div>
+                        <div class="card" id="ang">Angular</div>
+                    </div>
+                </div>
+            </div </div>
+
+    </section>
+
+    <section class="resume-section">
+        <div class="img-section2">
+            <div class="overlay_resume"></div>
+            <!-- <img src="images/data_science.jpg" alt="transparent technologies with a blue purple hue" id="ds_img"/> -->
+            <h1 id="resume-sec">Take a look at my resume</h1> <br>
+            <button class="my_resume" onclick=" window.open('Resume/Resume-ReDesign.pdf','_blank'); return false;">MY
+                RESUME</button>
+        </div>
+    </section>
+
+
+    <section class="education_workexp">
+        <div class="edu_workexp_container">
+            <div class="education-section">
+                <div id="uni_college">
+                    <h3 class="edu_workexp_header">Education</h3>
+                    <img id="tuLogo" src="images/towsonu-logo.png" alt="Towson University Logo" />
+                    <h4 id="towson-info"><b>BACHELOR OF SCIENCE</b> - TOWSON UNIVERSITY <br><i
+                            class="far fa-calendar-check" style='font-size:20px; color: white'></i><span> FALL 2017 -
+                            2019</span></h4>
+                </div>
+
+                <div id="comm_college">
+                    <img src="images/ccbcLogo.jpg" alt="CCBC Essex Logo with Knight mascot" id="ccbcLogo">
+                    <h4 id="ccbc-info"><b id="ccbc">ASSOCIATE OF SCIENCE</b> - COMMUNITY COLLEGE OF BALTIMORE COUNTY
+                        <br><i class="far fa-calendar-check" style='font-size: 20px; color: white;'></i><span> FALL 2013
+                            -
+                            2016</span></h4>
+                </div>
+
+            </div>
+
+            <div class="workExp-section">
+                <h3 class="edu_workexp_header">Work Experience</h3>
+                <div class="tab">
+                    <button class="tablinks active" onclick="openWorkexp(event,'UPS')">UPS</button>
+                    <button class="tablinks" onclick="openWorkexp(event, 'cyber4all')">Cyber4All</button>
+                </div>
+                <div id="UPS" class="tabcontent">
+                    <img src="images/UPS_logo.svg" alt="UPS Logo" id="ups_logo">
+                    <ul>
+                        <li class="jobTitle">
+                            <h4 class="job_title">SOFTWARE DEVELOPER 1</h4>
+                        </li>
+                        <span class="icon_date1"><i class="far fa-calendar" style='font-size:20px; color: black'></i>
+                            Dec 2019 - Present</span><br><br><br>
+
+                        <li class="jobTitle">
+                            <h4 class="job_title">COMP-SCI INTERN/CO-OP</h4>
+                        </li>
+                        <span class="icon_date"><i class="far fa-calendar" style='font-size:20px; color: black'></i>
+                            June 2019 - Dec 2019</span><br><br><br>
+
+                        <li class="jobTitle">
+                            <h4 class="job_title">APPLICATIONS INTERN</h4>
+                        </li>
+                        <span class="icon_date"><i class="far fa-calendar" style='font-size:20px; color: black'></i>
+                            June 2018 - Aug 2018</span>
+                    </ul>
+                </div>
+
+                <div id="cyber4all" class="tabcontent" style="display:none">
+                    <img src="images/clarkIcon.png" alt="Clark Logo" id="clark_logo">
+                    <ul>
+                        <li id="clark">
+                            <h4 class="job_title">JUNIOR SOFTWARE DEVELOPER</h4>
+                        </li>
+                        <span id="icon_date2"><i class="far fa-calendar" style='font-size:20px; color: black'></i> Mar
+                            2018 - Mar 2019</span>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="contact-me">
+        <div class="mail_icon">
+            <i class='fas fa-envelope' style="font-size:50px; color:aqua; margin-top: 20px"></i>
+        </div>
+        <h2 style="margin: 0px">Let's Connect</h2>
+        <p class="emailMe">
+            Wanna know more about me? or You just want to chat, please say hello!😀
+        </p>
+        <div class="email_button">
+            <a href="mailto:bart.allen27@outlook.com"><button id="email_me">Email Me</button></a>
+        </div>
+
+
+        <div class="social-media">
+         <a href="https://www.facebook.com/bartholomew.allen" target="_blank"><i class='fa fa-facebook-square' style="font-size: 45px; color: #3b5999; padding: 10px;"></i></a>
+            <a href="https://github.com/Ballen2713" target="_blank"><i class="fa fa-github-square" style="font-size: 45px; color: black; padding: 10px;"></i></a>
+            <a href="https://www.linkedin.com/in/bartholomew-allen-928350143/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 45px; color: #0077B5; padding: 10px;"></i></a>
+            <a href="https://www.instagram.com/blacklightning1011/" target="_blank"><i class="fa fa-instagram" style="font-size: 45px; color: #e4405f; padding: 10px;"></i></a>
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    <p>&#169; Bartholomew Allen 2020</p>
+    <br>
+</footer>
+
+</html>
