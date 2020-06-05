@@ -947,4 +947,20 @@ ul {
     height: 690px;
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .overlay22 {
+    opacity: 1.0;
+    filter: alpha(opacity=20);
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=main.css.map */
