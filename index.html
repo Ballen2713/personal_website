@@ -17,7 +17,7 @@
     if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
     {
       alert('Your Browser is Internet Explorer and unfortunately is not supported ☹'); 
-      document.write('<div class="overlay22"> <h1>Not Supported</h1></div>')
+      document.write('<div class="overlay22"> <h1>Not Supported <br> Please use Google Chrome or MS Edge</h1></div>')
     }  
     </script>
     
@@ -194,13 +194,21 @@
         <div class="mail_icon">
             <i class='fas fa-envelope' style="font-size:50px; color:aqua; margin-top: 20px"></i>
         </div>
-        <h2 style="margin: 0px">Let's Connect</h2>
+        <h2 style="margin: 0px; margin-bottom: 10px;">Let's Connect</h2>
+        <form action="contact.php" method="POST" enctype="application/x-www-form-urlencoded">
+           
+            <input type="text" id="fullname" name="full_name" placeholder="First and Last Name" size="20px">
+            <input type="text" id="email" name="email" placeholder="Email Address">
+            <input type="text" id="subject" name="subject" placeholder="Subject Line">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Message" style="width: 328px;"></textarea>
+            <!-- <div class="email_button"> -->
+                <input type="submit" name="submit" value="Send" id="email_me">
+            <!-- </div> -->
+        </form>
         <p class="emailMe">
             Wanna know more about me? or You just want to chat, please say hello!😀
         </p>
-        <div class="email_button">
-            <a href="mailto:bart.allen27@outlook.com"><button id="email_me">Email Me</button></a>
-        </div>
+      
 
 
         <div class="social-media">
