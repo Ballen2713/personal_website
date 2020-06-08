@@ -10,26 +10,47 @@
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="js/functionality.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/Technology.jpg" type="image/x-icon">
-  
+
     <script>
-    if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-    {
-      alert('Your Browser is Internet Explorer and unfortunately is not supported ☹'); 
-      document.write('<div class="overlay22"> <h1>Not Supported <br> Please use Google Chrome or MS Edge</h1></div>')
-    }  
+        if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+        {
+            alert('Your Browser is Internet Explorer and unfortunately is not supported ☹');
+            document.write('<div class="overlay22"> <h1>Not Supported <br> Please use Google Chrome or MS Edge</h1></div>')
+        }  
     </script>
-    
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function (event) {
+                event.preventDefault();
+                var name = $('#mail-full_name').val();
+                var email = $('#mail-email_address').val();
+                var subject = $('#mail-subject').val();
+                var message = $('#mail-msg').val();
+                var submit = $('#mail-email_me').val();
+                $(".form-message").load("contact.php", {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    submit: submit
+                });
+            });
+        });
+    </script>
+
     <!-- Version 2.0 of the website -->
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/fade-effect.js"></script> -->
 </head>
 
 <body onload="document.getElementById('UPS').click();">
-   
+
     <div class="hero">
-        <h1 class="scroll-fade" id="intro-p1">Hey there <br> <span id="bart_allen" class="scroll-fade">I am Bartholomew Allen <br><span id="expertise" class="scroll-fade">
+        <h1 class="scroll-fade" id="intro-p1">Hey there <br> <span id="bart_allen" class="scroll-fade">I am Bartholomew
+                Allen <br><span id="expertise" class="scroll-fade">
                     Software Engineer & Self taught Web Developer</span></span></h1>
         <div class="overlay"></div>
         <!-- <h1 id="bart_allen">I am Bartholomew Allen</h1> -->
@@ -38,9 +59,9 @@
 
     <section class="aboutMe">
         <div class="aboutMe-container">
-             <img src="images/Bartholomew-Allen.jpg" alt="Bartholomew Allen linkedIn photo" class="gradImage2">
+            <img src="images/Bartholomew-Allen.jpg" alt="Bartholomew Allen linkedIn photo" class="gradImage2">
             <div class="gradImage"></div>
-           
+
             <div id="aboutMe-blurb">
                 <h2>About Me</h2>
                 <p id="about_me_text">
@@ -65,7 +86,7 @@
                 </p>
             </div>
         </div>
-  
+
     </section>
 
 
@@ -108,7 +129,8 @@
                         <div class="card" id="ang">Angular</div>
                     </div>
                 </div>
-            </div </div>
+            </div>
+        </div>
 
     </section>
 
@@ -186,7 +208,6 @@
                 </div>
             </div>
         </div>
-        </div>
 
     </section>
 
@@ -195,35 +216,41 @@
             <i class='fas fa-envelope' style="font-size:50px; color:aqua; margin-top: 20px"></i>
         </div>
         <h2 style="margin: 0px; margin-bottom: 10px;">Let's Connect</h2>
-        <form action="contact.php" method="POST" enctype="application/x-www-form-urlencoded">
-           
-            <input type="text" name="full_name" placeholder="First and Last Name" size="20px">
-            <input type="text" name="email" placeholder="Email Address">
-            <input type="text" name="subject" placeholder="Subject Line">
-            <textarea name="message" cols="30" rows="10" placeholder="Message" style="width: 328px;"></textarea>
-            <!-- <div class="email_button"> -->
-                <input type="submit" name="submit" value="Send" id="email_me">
-            <!-- </div> -->
-        </form>
         <p class="emailMe">
             Wanna know more about me? or You just want to chat, please say hello!😀
         </p>
-      
+        <form action="contact.php" method="POST">
+
+            <input type="text" name="full_name" placeholder="First and Last Name" size="20px" id="mail-full_name">
+            <input type="text" name="email" placeholder="Email Address" id="mail-email_address">
+            <input type="text" name="subject" placeholder="Subject Line" id="mail-subject">
+            <textarea name="message" cols="30" rows="10" placeholder="Message" style="width: 328px;" id="mail-msg"></textarea>
+            <!-- <div class="email_button"> -->
+            <button type="submit" name="submit" id="mail-email_me">Send Email</button>
+            <p class="form-message"></p>
+            <!-- <span id="error_message" class="text-danger"></span>
+            <span id="success_message" class="text-success"></span> -->
+            <!-- </div> -->
+        </form>
 
 
         <div class="social-media">
-         <a href="https://www.facebook.com/bartholomew.allen" target="_blank"><i class='fa fa-facebook-square' style="font-size: 45px; color: #3b5999; padding: 10px;"></i></a>
-            <a href="https://github.com/Ballen2713" target="_blank"><i class="fa fa-github-square" style="font-size: 45px; color: black; padding: 10px;"></i></a>
-            <a href="https://www.linkedin.com/in/bartholomew-allen-928350143/" target="_blank"><i class="fa fa-linkedin-square" style="font-size: 45px; color: #0077B5; padding: 10px;"></i></a>
-            <a href="https://www.instagram.com/blacklightning1011/" target="_blank"><i class="fa fa-instagram" style="font-size: 45px; color: #e4405f; padding: 10px;"></i></a>
+            <a href="https://www.facebook.com/bartholomew.allen" target="_blank"><i class='fa fa-facebook-square'
+                    style="font-size: 45px; color: #3b5999; padding: 10px;"></i></a>
+            <a href="https://github.com/Ballen2713" target="_blank"><i class="fa fa-github-square"
+                    style="font-size: 45px; color: black; padding: 10px;"></i></a>
+            <a href="https://www.linkedin.com/in/bartholomew-allen-928350143/" target="_blank"><i
+                    class="fa fa-linkedin-square" style="font-size: 45px; color: #0077B5; padding: 10px;"></i></a>
+            <a href="https://www.instagram.com/blacklightning1011/" target="_blank"><i class="fa fa-instagram"
+                    style="font-size: 45px; color: #e4405f; padding: 10px;"></i></a>
         </div>
     </section>
 
+    <footer>
+        <p>&#169; Bartholomew Allen 2020</p>
+        <br>
+    </footer>
+    
 </body>
-
-<footer>
-    <p>&#169; Bartholomew Allen 2020</p>
-    <br>
-</footer>
 
 </html>
