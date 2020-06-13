@@ -9,6 +9,7 @@ if(isset($_POST['submit'])) {
     $txt = "You have recieved an e-mail from " .$full_name.".\n\n" .$message;
     //header("Location: index.html");
 
+    
 
     //Error Handling
     $errorEmpty = false;
