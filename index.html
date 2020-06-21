@@ -7,13 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Website Bart Allen</title>
     <link rel="stylesheet" href="css/main.css">
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="js/functionality.js"></script>
+    <script src="js/form-validation.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/Technology.jpg" type="image/x-icon">
-
     <script>
         if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
         {
@@ -21,26 +20,6 @@
             document.write('<div class="overlay22"> <h1>Not Supported <br> Please use Google Chrome or MS Edge</h1></div>')
         }  
     </script>
-    <!-- <script>
-        $(document).ready(function () {
-            $("form").submit(function (event) {
-                event.preventDefault();
-                var name = $('#mail-full_name').val();
-                var email = $('#mail-email_address').val();
-                var subject = $('#mail-subject').val();
-                var message = $('#mail-msg').val();
-                var submit = $('#mail-email_me').val();
-                $(".form-message").load("contact.php", {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    submit: submit
-                });
-            });
-        });
-    </script> -->
-
     <!-- Version 2.0 of the website -->
     <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/fade-effect.js"></script> -->
@@ -204,16 +183,11 @@
         </p>
         <form name="contact" method="POST" netlify>
 
-            <input type="text" name="full_name" placeholder="First and Last Name" size="20px" id="mail-full_name">
-            <input type="text" name="email" placeholder="Email Address" id="mail-email_address">
+            <input type="text" name="full_name" placeholder="First and Last Name" size="20px" id="mail-full_name" required>
+            <input type="text" name="email" placeholder="Email Address" id="mail-email_address" required>
             <input type="text" name="subject" placeholder="Subject Line" id="mail-subject">
-            <textarea name="message" cols="30" rows="10" placeholder="Message" style="width: 328px;" id="mail-msg"></textarea>
-            <!-- <div class="email_button"> -->
-            <button type="submit" name="submit" id="mail-email_me">Send Email</button>
-            <p class="form-message"></p>
-            <!-- <span id="error_message" class="text-danger"></span>
-            <span id="success_message" class="text-success"></span> -->
-            <!-- </div> -->
+            <textarea name="message" cols="30" rows="10" placeholder="Message" style="width: 328px;" id="mail-msg" required></textarea>
+            <button type="submit" name="submit" id="mail-email_me" >Send Email</button>
         </form>
 
 
