@@ -15,5 +15,3 @@ function openWorkexp(evt, workName) {
     document.getElementById(workName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
-document.getElementById('UPS').click();
